@@ -1,0 +1,18 @@
+{
+  "name": "new-binary-solutions",
+  "version": "1.0.0",
+  "description": "Marathi website project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Saniya",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mysql2": "^3.16.2",
+    "nodemailer": "^7.0.13"
+  }
+}
