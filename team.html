@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आमची टीम | New Binary Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="style.css"> 
+
+     <script>
+    // Add header to TOP of every page
+    document.write(`
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>NEW BINARY SOLUTIONS</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">होम</a></li>
+                    <li><a href="services.html">सेवा</a></li>
+                    <li><a href="team.html" style="color: var(--accent);">टीम</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </nav>
+    `);
+</script>
+    
+    <style>
+        :root {
+            --primary: #3b0634;
+            --accent: #3b82f6;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', 'Mukta', sans-serif; background-color: var(--bg); color: #37083b; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navbar */
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: 800; text-decoration: none; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 600; }
+
+        /* Header */
+        .team-header { background: var(--primary); color: white; padding: 80px 0; text-align: center; }
+        .team-header h1 { font-size: 3rem; margin-bottom: 15px; }
+
+        /* Team Grid */
+        .team-page-section { padding: 80px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+
+        .team-card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s;
+            text-align: center; border: 1px solid #edf2f7;
+        }
+        .team-card:hover { transform: translateY(-10px); box-shadow: 0 20px 35px rgba(0,0,0,0.1); }
+
+        .image-box { background: #e2e8f0; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .image-box i { font-size: 80px; color: #cbd5e1; }
+        /* जर फोटो असेल तर: .image-box img { width: 100%; height: 100%; object-fit: cover; } */
+
+        .info-box { padding: 25px; }
+        .info-box h3 { font-size: 22px; color: var(--primary); margin-bottom: 5px; }
+        .info-box p.role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+        .info-box p.desc { font-size: 15px; color: #64748b; margin-bottom: 20px; }
+
+        .social { display: flex; justify-content: center; gap: 15px; }
+        .social a { width: 35px; height: 35px; background: #f1f5f9; color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s; }
+        .social a:hover { background: var(--accent); color: white; }
+         /* Footer */
+        .marathi-footer {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+        
+
+        @media (max-width: 768px) { .team-header h1 { font-size: 2.2rem; } }
+         
+    </style>
+</head>
+<body>
+
+
+    <header class="team-header">
+        <div class="container">
+            <h1>आमची तज्ञ टीम</h1>
+            <p>तंत्रज्ञान आणि नाविन्यपूर्ण कल्पनांचा संगम असलेल्या आमच्या टीमला भेटा.</p>
+        </div>
+    </header>
+
+    <section class="team-page-section">
+        <div class="container">
+            <div class="grid">
+                
+                <div class="team-card">
+                    <div class="image-box"><i class="fas fa-user-tie"></i></div>
+                    <div class="info-box">
+                        <h3>सचिन सूर्यवंशी</h3>
+                        <p class="role">Founder & CEO</p>
+                        <p class="desc">व्हिजनरी लीडर आणि सॉफ्टवेअर आर्किटेक्ट.</p>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="image-box"><i class="fas fa-user-gear"></i></div>
+                    <div class="info-box">
+                        <h3>अमित पाटील</h3>
+                        <p class="role">Tech Lead</p>
+                        <p class="desc">फुल-स्टॅक डेव्हलपमेंट आणि सिस्टिम तज्ञ.</p>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="image-box"><i class="fas fa-user-pen"></i></div>
+                    <div class="info-box">
+                        <h3>प्रिया कुलकर्णी</h3>
+                        <p class="role">UI/UX Designer</p>
+                        <p class="desc">उत्कृष्ट युजर इंटरफेस डिझाइनर.</p>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> मुख्यपृष्ठावर परत जा 
+            </a>
+        </div>
+
+         <!-- Footer -->
+        <footer class="marathi-footer">
+            <p>© 2023 NEW BINARY SOLUTIONS. सर्व हक्क राखीव.</p>
+            <p>फ्लॅट क्र. १०३, अथर्वा स्कायलाईन्स, कॉफोर्ज लि. जवळ, उजळईवाडी, कोल्हापूर - ४१६००४</p>
+            <p>फोन: ८८३०६८०३१७, ९४२२४२४६६७ | ईमेल: newbinarysolutions@gmail.com</p>
+        </footer>
+    </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>

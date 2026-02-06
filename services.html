@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आमच्या सेवा | New Binary Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+
+    <script>
+    // Add header to TOP of every page
+    document.write(`
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>NEW BINARY SOLUTIONS</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">होम</a></li>
+                    <li><a href="services.html">सेवा</a></li>
+                    <li><a href="team.html" style="color: var(--accent);">टीम</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </nav>
+    `);
+</script>
+    
+    <style>
+        :root {
+            --primary: #450251;
+            --accent: #701d7f;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', 'Mukta', sans-serif; background-color: var(--bg); color: #334155; line-height: 1.6; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navbar */
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 22px; font-weight: 800; text-decoration: none; color: var(--primary); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 600; font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Header Section */
+        .page-header { background: var(--primary); color: white; padding: 60px 0; text-align: center; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* Service Detail Sections */
+        .service-detail-box { padding: 80px 0; border-bottom: 1px solid #e2e8f0; }
+        .service-detail-box:nth-child(even) { background: #fff; }
+        
+        .service-flex { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .service-text { flex: 1; min-width: 300px; }
+        .service-icon-large { 
+            flex: 0 0 150px; height: 150px; background: #eff6ff; 
+            border-radius: 30px; display: flex; align-items: center; 
+            justify-content: center; font-size: 70px; color: var(--accent); 
+        }
+
+        .service-text h2 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .service-text p { font-size: 1.1rem; margin-bottom: 20px; color: #475569; }
+        
+        .feature-list { list-style: none; }
+        .feature-list li { margin-bottom: 10px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+        .feature-list li i { color: #10b981; }
+
+        /* Footer CTA */
+        .cta-section { padding: 60px 0; text-align: center; background: var(--accent); color: white; }
+        .btn-white { 
+            background: white; color: var(--accent); padding: 12px 30px; 
+            text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .service-flex { flex-direction: column; text-align: center; }
+            .service-icon-large { margin: 0 auto; }
+        }
+         
+    </style>
+</head>
+<body>
+   
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="grid">
+                <a href="service-detail.html#trading" class="card-link">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-desktop"></i></div>
+                    <h3>ट्रेडिंग ऑटोमेशन</h3>
+                    <p>हे विभागीय प्रक्रिया स्वयंचलित करण्यासाठी वापरले जाते.</p>
+                </div>
+                </a>
+                 <a href="service-detail.html#dairy" class="card-link">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-cow"></i></div>
+                    <h3>डेअरी (मिल्क) ऑटोमेशन</h3>
+                    <p>दुध संकलन आणि हिशोबासाठी प्रगत आणि सोपी प्रणाली.</p>
+                </div>
+                </a>
+
+                 <a href="service-detail.html#auditor" class="card-link">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>ऑडिटर सॉफ्टवेअर</h3>
+                    <p>ते समाजाच्या कामकाजाचे व्यवस्थापन करते.</p>
+                </div>
+                </a>
+                <a href="service-detail.html#mobile-dairy" class="card-link">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>मोबाइल डेअरी ॲप्लिकेशन</h3>
+                    <p>हे स्टेशनरी व्यवस्थापन प्रक्रिया सुलभ करते.</p>
+            </div>
+            </a>
+            <a href="service-detail.html#appdev" class="card-link">
+            <div class="card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>मोबाइल ॲप्लिकेशन</h3>
+            </div>
+            </a>
+        </div>
+    </section>
+    
+    
+
+    
+
+    <div class="page-header">
+        <div class="container">
+            <h1>आमच्या प्रगत सेवा</h1>
+            <p>आम्ही व्यवसायाला तंत्रज्ञानाची जोड देऊन प्रगतीकडे नेतो.</p>
+        </div>
+    </div>
+
+    <section class="service-detail-box" id="trading">
+  <div class="container service-flex">
+    <div class="service-icon-large">
+      <i class="fas fa-chart-line"></i>
+    </div>
+
+    <div class="service-text">
+      <h2>ट्रेडिंग ऑटोमेशन प्रणाली</h2>
+      <p>
+        शेअर मार्केट व ट्रेडिंग व्यवसायासाठी आमची ट्रेडिंग ऑटोमेशन प्रणाली
+        व्यवहार अधिक अचूक, जलद आणि सुरक्षित बनवते.
+      </p>
+
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> ऑटोमॅटिक बाय–सेल सिग्नल्स</li>
+        <li><i class="fas fa-check-circle"></i> रिअल-टाइम प्रॉफिट / लॉस रिपोर्ट</li>
+        <li><i class="fas fa-check-circle"></i> रिस्क मॅनेजमेंट आणि अलर्ट सिस्टम</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail-box" id="dairy">
+  <div class="container service-flex">
+    <div class="service-icon-large">
+      <i class="fas fa-cow"></i>
+    </div>
+
+    <div class="service-text">
+      <h2>डेअरी ऑटोमेशन प्रणाली</h2>
+      <p>
+        दुध उत्पादक आणि डेअरी मालक यांच्यातील व्यवहार पारदर्शक
+        आणि जलद करण्यासाठी आमचे सॉफ्टवेअर डिझाइन केलेले आहे.
+      </p>
+
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> स्वयंचलित फॅट आणि डिग्री कॅल्क्युलेशन</li>
+        <li><i class="fas fa-check-circle"></i> सभासदानुसार दररोजचा अहवाल (Daily Report)</li>
+        <li><i class="fas fa-check-circle"></i> थेट बँकेत पेमेंट जमा करण्याची सुविधा</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail-box" id="mobile-dairy">
+  <div class="container service-flex" style="flex-direction: row-reverse;">
+    <div class="service-icon-large">
+      <i class="fas fa-mobile-alt"></i>
+    </div>
+
+    <div class="service-text">
+      <h2>मोबाइल डेअरी ॲप्लिकेशन</h2>
+      <p>
+        डेअरी व्यवसायासाठी खास डिझाइन केलेले मोबाइल ॲप्लिकेशन
+        जे व्यवहार आणि नोंदी मोबाइलवर सहज व्यवस्थापित करते.
+      </p>
+
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> मोबाईलवर दुध नोंदणी व बिलिंग</li>
+        <li><i class="fas fa-check-circle"></i> सभासदांचे खाते व्यवस्थापन</li>
+        <li><i class="fas fa-check-circle"></i> ऑनलाइन रिपोर्ट आणि नोटिफिकेशन</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="service-detail-box" id="appdev">
+  <div class="container service-flex">
+    <div class="service-icon-large">
+      <i class="fas fa-code"></i>
+    </div>
+
+    <div class="service-text">
+      <h2>मोबाइल ॲप्लिकेशन डेव्हलपमेंट</h2>
+      <p>
+        तुमच्या व्यवसायासाठी आवश्यक असलेले आधुनिक, सुरक्षित
+        आणि युजर-फ्रेंडली मोबाइल ॲप्लिकेशन आम्ही विकसित करतो.
+      </p>
+
+      <ul class="feature-list">
+        <li><i class="fas fa-check-circle"></i> Android आणि Web आधारित ॲप्स</li>
+        <li><i class="fas fa-check-circle"></i> कस्टम डिझाइन आणि फिचर्स</li>
+        <li><i class="fas fa-check-circle"></i> देखभाल व तांत्रिक सपोर्ट</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>तुमच्या व्यवसायासाठी योग्य सोल्यूशन शोधत आहात?</h2>
+            <a href="contact.html" class="btn-white">आजच संपर्क साधा</a>
+        </div>
+        <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> मुख्यपृष्ठावर परत जा
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आमच्या सेवा - New Binary Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">  
+
+     <script>
+    // Add header to TOP of every page
+    document.write(`
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>NEW BINARY SOLUTIONS</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">होम</a></li>
+                    <li><a href="services.html">सेवा</a></li>
+                    <li><a href="team.html" style="color: var(--accent);">टीम</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </nav>
+    `);
+</script>
+    <style>
+        .service-detail { 
+            padding: 100px 0; 
+            border-bottom: 2px solid #f0f0f0; 
+            display: flex; 
+            align-items: center; 
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .service-text { flex: 1; min-width: 300px; }
+        .service-image { flex: 1; min-width: 300px; }
+        .service-image img { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 380px;
+            object-fit: cover;   
+        }
+        .service-detail h2 { color: #5f126c; font-size: 2rem; margin-bottom: 20px; }
+        .service-detail p { font-size: 1.1rem; line-height: 1.8; color: #444; }
+       
+        /* Smooth scrolling for the links */
+        html { scroll-behavior: smooth; }
+        /* Navbar styles */
+        .navbar {
+    position: relative;
+}
+.navbar::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(95, 18, 108, 0.35),
+        transparent
+    );
+}
+
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(95, 18, 108, 0.4),
+        transparent
+    );
+}
+
+        
+@keyframes logoLine {
+    to {
+        width: 100%;
+    }
+}
+.logo {
+    transition: color 0.3s ease;
+}
+
+.navbar {
+    padding: 28px 40px;   /* creates vertical breathing space */
+}
+
+
+
+
+
+.logo:hover::after {
+    box-shadow: 0 0 12px rgba(208, 38, 202, 0.6);
+}
+
+        /* Title underline */
+.service-detail h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.service-detail h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #5f126c, #d026ca);
+    animation: underlineGrow 1s ease forwards;
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/* Section animation */
+.service-detail {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.service-detail:nth-child(1) { animation-delay: 0.1s; }
+.service-detail:nth-child(2) { animation-delay: 0.25s; }
+.service-detail:nth-child(3) { animation-delay: 0.4s; }
+.service-detail:nth-child(4) { animation-delay: 0.55s; }
+.service-detail:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.service-image img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.service-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 20px 45px rgba(95, 18, 108, 0.25);
+}
+.back-btn {
+    transition: all 0.35s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(95, 18, 108, 0.35);
+}
+body {
+    background: linear-gradient(
+        120deg,
+        #faf5ff,
+        #fdf1ff,
+        #f8f0ff
+    );
+    background-size: 400% 400%;
+    animation: bgMove 15s ease infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 170, 252, 0.558),
+        transparent 40%
+    ),
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(247, 212, 254, 0.901),
+        transparent 45%
+    ),
+    radial-gradient(
+        circle at 50% 80%,
+        rgba(223, 195, 244, 0.911),
+        transparent 45%
+    );
+    animation: floatBg 18s ease-in-out infinite;
+}
+
+@keyframes floatBg {
+    0%   { transform: translateY(0) translateX(0); }
+    50%  { transform: translateY(-25px) translateX(15px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <section id="trading" class="service-detail">
+            <div class="service-text">
+                <h2>ट्रेडिंग ऑटोमेशन (Trading Automation)</h2>
+                <p>आम्ही अत्याधुनिक अल्गोरिदम वापरून ट्रेडिंग प्रक्रिया स्वयंचलित करतो. हे विभागीय प्रक्रिया स्वयंचलित करण्यासाठी आणि मानवी चुका कमी करून नफा वाढवण्यासाठी डिझाइन केलेले आहे.</p>
+            </div>
+            <div class="service-image">
+                <img src="https://fxmedia.s3.amazonaws.com/articles/automated_trading_vs_manual_trading.jpeg" alt="Trading">
+            </div>
+        </section>
+
+        <section id="dairy" class="service-detail">
+            <div class="service-image">
+                <img src="https://www.shutterstock.com/image-photo/glass-bottles-milk-moving-on-600nw-2656777589.jpg" alt="Dairy">
+            </div>
+            <div class="service-text">
+                <h2>डेअरी (मिल्क) ऑटोमेशन</h2>
+                <p>दुध संकलन आणि हिशोबासाठी प्रगत आणि सोपी प्रणाली. ही प्रणाली दुधाच्या संकलनापासून ते पेमेंट वितरणापर्यंत सर्व प्रक्रिया पारदर्शक आणि वेगवान करते.</p>
+            </div>
+        </section>
+
+        <section id="auditor" class="service-detail">
+            <div class="service-text">
+                <h2>ऑडिटर सॉफ्टवेअर (Auditor Software)</h2>
+                <p>हे सोसायट्या आणि संस्थांच्या कामकाजाचे व्यवस्थापन करते. ऑडिटिंगसाठी लागणारे सर्व महत्त्वाचे रिपोर्ट आणि हिशोब एका क्लिकवर उपलब्ध होतात.</p>
+            </div>
+            <div class="service-image">
+                <img src="https://thumbs.dreamstime.com/b/audit-official-financial-examination-business-as-concept-virtual-screen-141548900.jpg" alt="Auditor">
+            </div>
+        </section>
+
+        <section id="mobile-dairy" class="service-detail">
+            <div class="service-image">
+                <img src="https://mobiledairy.co.in/assets/images/website%20images%20.png" alt="Mobile Dairy">
+            </div>
+            <div class="service-text">
+                <h2>मोबाइल डेअरी ॲप्लिकेशन</h2>
+                <p>शेतकरी आणि डेअरी मालकांसाठी खास तयार केलेले ॲप. याद्वारे तुम्ही रोजचे दुध संकलन, दर आणि बिले तुमच्या मोबाइलवर पाहू शकता.</p>
+            </div>
+        </section>
+
+        <section id="appdev" class="service-detail">
+            <div class="service-text">
+                <h2>मोबाइल ॲप्लिकेशन डेव्हलपमेंट</h2>
+                <p>आम्ही तुमच्या व्यवसायासाठी सानुकूल (Custom) मोबाइल ॲप्लिकेशन्स विकसित करतो. आधुनिक डिझाइन आणि सुरक्षित तंत्रज्ञानाचा वापर करून तुमचा व्यवसाय डिजिटल करतो.</p>
+            </div>
+            <div class="service-image">
+                <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg?semt=ais_hybrid&w=740&q=80" alt="App Dev">
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> मुख्यपृष्ठावर परत जा
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

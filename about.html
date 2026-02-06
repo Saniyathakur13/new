@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW BINARY SOLUTIONS - आमच्याबद्दल</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+     <script>
+    // Add header to TOP of every page
+    document.write(`
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>NEW BINARY SOLUTIONS</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">होम</a></li>
+                    <li><a href="services.html">सेवा</a></li>
+                    <li><a href="team.html" style="color: var(--accent);">टीम</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </nav>
+    `);
+</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Noto Sans Devanagari', 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .marathi-header {
+            background: linear-gradient(to right, #16021b, #490e63);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .marathi-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .marathi-header .divider {
+            width: 150px;
+            height: 4px;
+            background: white;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .marathi-tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-text {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-text::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #1a2980, #4e0f63);
+        }
+
+        .mission-statement {
+            font-size: 1.5rem;
+            color: #1a2980;
+            margin-bottom: 25px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .objective {
+            margin-bottom: 30px;
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        /* Services List */
+        .services-section h3 {
+            color: #1a2980;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #470a48;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .services-list li:hover {
+            transform: translateX(10px);
+            background: #eef5ff;
+            box-shadow: 0 5px 15px rgba(38, 208, 206, 0.1);
+        }
+
+        .services-list li i {
+            color: #620c5f;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        /* Statistics Counter */
+        .stats-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .stats-section h3 {
+            color: #1a2980;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 480px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-box {
+            padding: 25px 15px;
+            border-radius: 10px;
+            background: #f8f9ff;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a2980;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        
+
+        /* Footer */
+        .marathi-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+        /* Animation for fade in */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+        .delay-3 { animation-delay: 0.6s; opacity: 0; }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="marathi-header">
+        <div class="container">
+            <h1>NEW BINARY SOLUTIONS</h1>
+            <div class="divider"></div>
+            <p class="marathi-tagline">आजच्या आयटी क्षेत्रातील गरजा आणि आवश्यकता लक्षात घेऊन न्यू बायनरी सोल्यूशन्सची स्थापना केली आहे.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Main Content Section -->
+        <div class="about-content">
+            <!-- About Text Section -->
+            <div class="about-text fade-in">
+                <p class="mission-statement">आमचे उद्दिष्ट अशी सेवा, सॉफ्टवेअर आणि हार्डवेअर उत्पादने पुरवणे आहे की ज्यामुळे कागदावरील निकालाऐवजी वास्तविक परिणाम मिळतील.</p>
+                
+                <div class="objective">
+                    <p>न्यू बायनरी सोल्यूशन्स कंपनी तांत्रिक ते व्यावसायिक क्षेत्रातील व्यावहारिक अनुभव असलेल्या तज्ञांच्या संघाद्वारे चालविली जाते. आम्ही विविध सेवा क्षेत्रात मोलाचे योगदान देत आहोत.</p>
+                </div>
+
+                <!-- Services Section -->
+                <div class="services-section">
+                    <h3>आम्ही बायनरी सोल्यूशन्स खालीलप्रमाणे सेवा पुरवतो:</h3>
+                    <ul class="services-list">
+                        <li class="delay-1">
+                            <i class="fas fa-code"></i>
+                            <span>सॉफ्टवेअर डेव्हलपमेंट</span>
+                        </li>
+                        <li class="delay-2">
+                            <i class="fas fa-robot"></i>
+                            <span>सहकारी क्षेत्रात स्वयंचलन (ऑटोमेशन)</span>
+                        </li>
+                        <li class="delay-3">
+                            <i class="fas fa-server"></i>
+                            <span>हार्डवेअर पुरवठा आणि देखभाल</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-section fade-in delay-1">
+                <h3>आमचे आकडे</h3>
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="900">0</span>
+                        <span class="stat-label">ग्राहक</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">प्रकल्प</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="1453">0</span>
+                        <span class="stat-label">समर्थनाचे तास</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">सदस्य</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> मुख्यपृष्ठावर परत जा
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="marathi-footer">
+            <p>© 2023 NEW BINARY SOLUTIONS. सर्व हक्क राखीव.</p>
+            <p>फ्लॅट क्र. १०३, अथर्वा स्कायलाईन्स, कॉफोर्ज लि. जवळ, उजळईवाडी, कोल्हापूर - ४१६००४</p>
+            <p>फोन: ८८३०६८०३१७, ९४२२४२४६६७ | ईमेल: newbinarysolutions@gmail.com</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Counter Animation -->
+    <script>
+        // Counter Animation Function
+        function animateCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.innerText = Math.floor(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Fade in animation on scroll
+        function handleScrollAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in, .delay-1, .delay-2, .delay-3');
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start counter animation after a short delay
+            setTimeout(animateCounter, 500);
+            
+            // Handle scroll animations
+            handleScrollAnimations();
+            window.addEventListener('scroll', handleScrollAnimations);
+            
+            // Force animation to play for elements already in view
+            const fadeElements = document.querySelectorAll('.fade-in, .delay-1, .delay-2, .delay-3');
+            fadeElements.forEach(element => {
+                element.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>
